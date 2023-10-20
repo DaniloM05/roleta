@@ -36,7 +36,8 @@ $(document).ready(function(){
                 setTimeout(function(){
                     $('#spin').prop('disabled', false);
                     girando = false; // Permite girar novamente após os 8 segundos
-                }, 8000);
+                    executarOpcao(clicks); // Chama a nova função após 8 segundos
+                }, 6600);
             } else {
                 $('#aviso').css('display', 'block');
                 $('#spin').prop('disabled', true);
@@ -45,3 +46,22 @@ $(document).ready(function(){
         }
     });
 });
+
+function executarOpcao(opcao) {
+    switch (opcao) {
+        case 1:
+            $('#resultado').text('Opção 1 selecionada');
+            break;
+        case 2:
+            $('#resultado').text('Opção 2 selecionada');
+            break;
+        case 3:
+            $('#resultado').text('Opção 3 selecionada');
+            break;
+        case 4:
+            $('#resultado').text('Opção 4 selecionada');
+            break;
+        default:
+            break;
+    }
+}
