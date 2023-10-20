@@ -161,3 +161,7 @@ h1{
     opacity: 0.5;
     pointer-events: none; /* Desativa eventos de clique */
 }
+
+#resultado{
+	text-align: center;
+}
